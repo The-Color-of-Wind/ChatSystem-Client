@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/avatar">
+        <file>images/1.png</file>
+        <file>images/2.png</file>
+        <file>images/3.png</file>
+        <file>images/4.png</file>
+        <file>images/5.png</file>
+        <file>images/6.png</file>
+        <file>images/7.png</file>
+        <file>images/8.png</file>
+        <file>images/9.PNG</file>
+        <file>images/10.PNG</file>
+        <file>images/11.PNG</file>
+        <file>images/12.PNG</file>
+        <file>images/13.PNG</file>
+        <file>images/14.PNG</file>
+    </qresource>
+</RCC>
