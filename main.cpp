@@ -9,7 +9,7 @@
 static int n = 0;  // 声明全局变量
 int main(int argc, char *argv[])
 {
-    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);  // 启用高DPI缩放（某些情况下有影响）
+    //QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);  // 启用高DPI缩放（某些情况下有影响）
 
     QApplication a(argc, argv);
     Action w;

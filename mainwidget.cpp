@@ -1,5 +1,6 @@
 #include "mainwidget.h"
 #include "ui_mainwidget.h"
+#include <QButtonGroup>
 
 MainWidget::MainWidget(QWidget *parent)
     : QWidget(parent)
@@ -8,8 +9,83 @@ MainWidget::MainWidget(QWidget *parent)
     ui->setupUi(this);
 
 }
+void MainWidget::initIcon()
+{
+    // 按钮大小
+    QSize iconSize(20, 20); // 你可以调整这个大小
+
+    // 设置 chatButton 背景图片
+    ui->chatButton->setCheckable(true);
+    ui->chatButton->setIcon(QIcon(":/images/system/chat.png"));
+    ui->chatButton->setIconSize(iconSize);
+    ui->chatButton->setStyleSheet(R"(
+    QPushButton {
+        border: none;
+        background: transparent;
+    }
+    QPushButton:checked {
+        icon: url(:/images/system/chatCheck.png);
+    }
+)");
+
+    // 设置 friendButton 背景图片
+    ui->friendButton->setCheckable(true);
+    ui->friendButton->setIcon(QIcon(":/images/system/user.png"));
+    ui->friendButton->setIconSize(iconSize);
+    ui->friendButton->setStyleSheet(R"(
+    QPushButton {
+        border: none;
+        background: transparent;
+    }
+    QPushButton:checked {
+        icon: url(:/images/system/userCheck.png);
+    }
+)");
+
+    // 设置 momentsButton 背景图片
+    ui->momentsButton->setCheckable(true);
+    ui->momentsButton->setIcon(QIcon(":/images/system/moments.png"));
+    ui->momentsButton->setIconSize(iconSize);
+    ui->momentsButton->setStyleSheet(R"(
+    QPushButton {
+        border: none;
+        background: transparent;
+    }
+    QPushButton:checked {
+        icon: url(:/images/system/momentsCheck.png);
+    }
+)");
+
+    // 设置 setupButton 背景图片
+    ui->setupButton->setCheckable(true);
+    ui->setupButton->setIcon(QIcon(":/images/system/setup.png"));
+    ui->setupButton->setIconSize(iconSize);
+    ui->setupButton->setStyleSheet(R"(
+    QPushButton {
+        border: none;
+        background: transparent;
+    }
+    QPushButton:checked {
+        icon: url(:/images/system/setupCheck.png);
+    }
+)");
+
+    // 确保只有一个按钮处于选中状态（类似 Tab 切换效果）
+    QButtonGroup *buttonGroup = new QButtonGroup(this);
+    buttonGroup->addButton(ui->chatButton);
+    buttonGroup->addButton(ui->friendButton);
+    buttonGroup->addButton(ui->momentsButton);
+    buttonGroup->addButton(ui->setupButton);
+    buttonGroup->setExclusive(true); // 确保只有一个按钮处于 checked 状态
+
+    // 最后设置 frame 的背景为深灰色
+    ui->frame->setStyleSheet("background-color: #2E2E2E;");
+
+}
+//====== 显示主界面 ======
 void MainWidget::initialMainWidget(User user)
 {
+    initIcon();
     this->user = user;
 
     //显示头像
@@ -56,12 +132,8 @@ void MainWidget::initialMainWidget(User user)
 
 }
 
-MainWidget::~MainWidget()
-{
-    delete ui;
-}
 
-
+//====== 切换聊天界面 ======
 void MainWidget::on_chatButton_clicked()
 {
     QJsonObject jsonChatting;
@@ -73,7 +145,7 @@ void MainWidget::on_chatButton_clicked()
     stackedWidget->setCurrentWidget(chatWidget);
 }
 
-
+//====== 切换好友界面 ======
 void MainWidget::on_friendButton_clicked()
 {
     /*
@@ -108,3 +180,7 @@ void MainWidget::on_friendButton_clicked()
     stackedWidget->setCurrentWidget(friendWidget);
 }
 
+MainWidget::~MainWidget()
+{
+    delete ui;
+}

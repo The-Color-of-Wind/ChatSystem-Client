@@ -50,7 +50,8 @@ public:
 
     void initialMainWidget(User user);
 
-
+    // 初始化图标
+    void initIcon();
 
 private slots:
     void on_chatButton_clicked();

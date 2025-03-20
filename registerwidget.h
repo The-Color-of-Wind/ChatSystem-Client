@@ -8,6 +8,7 @@
 #include <QSqlError>
 #include <QDebug>
 #include <QString>
+#include <QKeyEvent>
 
 
 namespace Ui {
@@ -21,6 +22,8 @@ class RegisterWidget : public QWidget
 public:
     explicit RegisterWidget(QWidget *parent = nullptr);
     ~RegisterWidget();
+
+    void keyPressEvent(QKeyEvent *event);
 
 signals:
     void backButtonClicked();

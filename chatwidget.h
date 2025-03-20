@@ -34,6 +34,8 @@
 
 #include <QMetaObject>
 
+#include <QButtonGroup>
+
 
 #include "serverconnect.h"
 #include "serverconnectthread.h"
@@ -57,10 +59,12 @@ public:
     ~ChatWidget();
 
 public: //创建界面
+    //void initWidget;
     //创建聊天记录界面
     QWidget *createMessageWidget(const QString &avatar,const QString &message, bool isSelf);
     void addMessageToChat(const QString &avatar,const QString &message, bool isSelf);
     void initChatTextEdit();
+    void initIcon();
 
 public: //功能函数
     User getUser(){return this->user;}

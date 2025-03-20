@@ -27,8 +27,8 @@ public:
     QPushButton *avatarButton;
     QPushButton *chatButton;
     QPushButton *friendButton;
-    QPushButton *circleButton;
-    QPushButton *pushButton_14;
+    QPushButton *momentsButton;
+    QPushButton *pushButton_3;
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
@@ -87,19 +87,19 @@ public:
 
         verticalLayout->addWidget(friendButton);
 
-        circleButton = new QPushButton(layoutWidget);
-        circleButton->setObjectName("circleButton");
-        circleButton->setMinimumSize(QSize(45, 45));
-        circleButton->setMaximumSize(QSize(45, 45));
+        momentsButton = new QPushButton(layoutWidget);
+        momentsButton->setObjectName("momentsButton");
+        momentsButton->setMinimumSize(QSize(45, 45));
+        momentsButton->setMaximumSize(QSize(45, 45));
 
-        verticalLayout->addWidget(circleButton);
+        verticalLayout->addWidget(momentsButton);
 
-        pushButton_14 = new QPushButton(layoutWidget);
-        pushButton_14->setObjectName("pushButton_14");
-        pushButton_14->setMinimumSize(QSize(45, 45));
-        pushButton_14->setMaximumSize(QSize(45, 45));
+        pushButton_3 = new QPushButton(layoutWidget);
+        pushButton_3->setObjectName("pushButton_3");
+        pushButton_3->setMinimumSize(QSize(45, 45));
+        pushButton_3->setMaximumSize(QSize(45, 45));
 
-        verticalLayout->addWidget(pushButton_14);
+        verticalLayout->addWidget(pushButton_3);
 
         pushButton_4 = new QPushButton(layoutWidget);
         pushButton_4->setObjectName("pushButton_4");
@@ -159,16 +159,16 @@ public:
         frame->setStatusTip(QString());
 #endif // QT_CONFIG(statustip)
         avatarButton->setText(QString());
-        chatButton->setText(QCoreApplication::translate("MainWidget", "\350\201\212\345\244\251", nullptr));
-        friendButton->setText(QCoreApplication::translate("MainWidget", "\345\245\275\345\217\213", nullptr));
-        circleButton->setText(QCoreApplication::translate("MainWidget", "\346\234\213\345\217\213\345\234\210", nullptr));
-        pushButton_14->setText(QString());
+        chatButton->setText(QString());
+        friendButton->setText(QString());
+        momentsButton->setText(QString());
+        pushButton_3->setText(QString());
         pushButton_4->setText(QString());
         pushButton_5->setText(QString());
         pushButton_6->setText(QString());
         pushButton_7->setText(QString());
         pushButton_8->setText(QString());
-        setupButton->setText(QCoreApplication::translate("MainWidget", "PushButton", nullptr));
+        setupButton->setText(QString());
     } // retranslateUi
 
 };

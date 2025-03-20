@@ -1,18 +1,28 @@
 <RCC>
-    <qresource prefix="/avatar">
-        <file>images/1.png</file>
-        <file>images/2.png</file>
-        <file>images/3.png</file>
-        <file>images/4.png</file>
-        <file>images/5.png</file>
-        <file>images/6.png</file>
-        <file>images/7.png</file>
-        <file>images/8.png</file>
-        <file>images/9.PNG</file>
-        <file>images/10.PNG</file>
-        <file>images/11.PNG</file>
-        <file>images/12.PNG</file>
-        <file>images/13.PNG</file>
-        <file>images/14.PNG</file>
+    <qresource prefix="/">
+        <file>images/avatar/1.png</file>
+        <file>images/avatar/2.png</file>
+        <file>images/avatar/3.png</file>
+        <file>images/avatar/4.png</file>
+        <file>images/avatar/5.png</file>
+        <file>images/avatar/6.png</file>
+        <file>images/avatar/7.png</file>
+        <file>images/avatar/8.png</file>
+        <file>images/avatar/9.PNG</file>
+        <file>images/avatar/10.PNG</file>
+        <file>images/avatar/11.PNG</file>
+        <file>images/avatar/12.PNG</file>
+        <file>images/avatar/13.PNG</file>
+        <file>images/avatar/14.PNG</file>
+        <file>images/system/chat.png</file>
+        <file>images/system/chatCheck.png</file>
+        <file>images/system/file.png</file>
+        <file>images/system/moments.png</file>
+        <file>images/system/setup.png</file>
+        <file>images/system/setupCheck.png</file>
+        <file>images/system/user.png</file>
+        <file>images/system/userCheck.png</file>
+        <file>images/system/momentsCheck.png</file>
+        <file>images/system/background.png</file>
     </qresource>
 </RCC>
