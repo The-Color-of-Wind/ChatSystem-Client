@@ -117,7 +117,7 @@
         </size>
        </property>
        <property name="text">
-        <string>聊天</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -136,12 +136,12 @@
         </size>
        </property>
        <property name="text">
-        <string>好友</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="circleButton">
+      <widget class="QPushButton" name="momentsButton">
        <property name="minimumSize">
         <size>
          <width>45</width>
@@ -155,12 +155,12 @@
         </size>
        </property>
        <property name="text">
-        <string>朋友圈</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="minimumSize">
         <size>
          <width>45</width>
@@ -288,7 +288,7 @@
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string/>
        </property>
       </widget>
      </item>

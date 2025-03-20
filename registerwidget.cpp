@@ -14,7 +14,15 @@ RegisterWidget::~RegisterWidget()
 
     connect(ui->backButton, &QPushButton::clicked,  this, &RegisterWidget::on_backButton_clicked);
 }
-
+void RegisterWidget::keyPressEvent(QKeyEvent *event) {
+    // 检查是否是回车键
+    if (event->key() == Qt::Key_Return) {
+        // 自动点击 loginButton
+        on_registerButton_clicked(); // 假设这个函数是你点击按钮的槽函数
+    }
+    // 处理其他按键事件（如果有的话）
+    QWidget::keyPressEvent(event);
+}
 
 QString convertUnicodeToString(const QString &input) {
 

@@ -105,7 +105,7 @@ public:
         frame_6->setFrameShadow(QFrame::Raised);
         nameButton = new QPushButton(frame_6);
         nameButton->setObjectName("nameButton");
-        nameButton->setGeometry(QRect(10, 0, 50, 30));
+        nameButton->setGeometry(QRect(0, 10, 50, 30));
         nameButton->setMinimumSize(QSize(50, 30));
         nameButton->setMaximumSize(QSize(50, 30));
         frame_3 = new QFrame(widget_3);
@@ -177,9 +177,9 @@ public:
     {
         ChatWidget->setWindowTitle(QCoreApplication::translate("ChatWidget", "Form", nullptr));
         pushButton_3->setText(QCoreApplication::translate("ChatWidget", "+", nullptr));
-        nameButton->setText(QCoreApplication::translate("ChatWidget", "PushButton", nullptr));
+        nameButton->setText(QString());
         emoticonButton->setText(QString());
-        fileButton->setText(QCoreApplication::translate("ChatWidget", "PushButton", nullptr));
+        fileButton->setText(QString());
         chatTextEdit->setHtml(QCoreApplication::translate("ChatWidget", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
