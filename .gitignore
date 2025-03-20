@@ -1,0 +1,106 @@
+<<<<<<< HEAD
+# C++ objects and libs
+*.slo
+*.lo
+*.o
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+*.qm
+*.prl
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.autosave
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# QtCreator CMake
+CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database
+compile_commands.json
+
+# QtCreator local machine specific files for imported projects
+*creator.user*
+
+*_qmlcache.qrc
+=======
+# 忽略 Qt 编译中间文件
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.app
+*.dSYM/
+*.pdb
+
+# Qt 生成的 moc、rcc、ui 文件
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+
+# CMake 生成的文件（如果用 CMake）
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Qt Creator 用户配置文件（不要上传）
+*.pro.user
+*.pro.user.*
+*.pro.swp
+
+# Qt 编译目录（例如 build 文件夹）
+build*/
+debug/
+release/
+
+# Visual Studio 相关（如果你用 VS 编译 Qt 项目）
+*.sln
+*.vcxproj*
+*.ncb
+*.sdf
+*.opensdf
+*.vcxproj.user
+*.ipch
+
+# 其他 IDE 配置
+.idea/
+.vscode/
+
+# 生成的日志文件
+*.log
