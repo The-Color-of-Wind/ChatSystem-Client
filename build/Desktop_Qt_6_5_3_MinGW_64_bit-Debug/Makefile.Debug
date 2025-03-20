@@ -190,20 +190,30 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_res.cpp
 debug/qrc_res.cpp: ../../res.qrc \
 		D:/tool/QT/6.5.3/mingw_64/bin/rcc.exe \
-		../../images/9.PNG \
-		../../images/2.png \
-		../../images/3.png \
-		../../images/4.png \
-		../../images/7.png \
-		../../images/14.PNG \
-		../../images/6.png \
-		../../images/10.PNG \
-		../../images/1.png \
-		../../images/11.PNG \
-		../../images/8.png \
-		../../images/5.png \
-		../../images/13.PNG \
-		../../images/12.PNG
+		../../images/avatar/9.PNG \
+		../../images/avatar/2.png \
+		../../images/avatar/3.png \
+		../../images/avatar/4.png \
+		../../images/avatar/7.png \
+		../../images/avatar/14.PNG \
+		../../images/avatar/6.png \
+		../../images/avatar/10.PNG \
+		../../images/avatar/1.png \
+		../../images/avatar/11.PNG \
+		../../images/avatar/8.png \
+		../../images/avatar/5.png \
+		../../images/avatar/13.PNG \
+		../../images/avatar/12.PNG \
+		../../images/system/momentsCheck.png \
+		../../images/system/moments.png \
+		../../images/system/background.png \
+		../../images/system/setup.png \
+		../../images/system/setupCheck.png \
+		../../images/system/chat.png \
+		../../images/system/file.png \
+		../../images/system/chatCheck.png \
+		../../images/system/user.png \
+		../../images/system/userCheck.png
 	D:\tool\QT\6.5.3\mingw_64\bin\rcc.exe -name res --no-zstd ..\..\res.qrc -o debug\qrc_res.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -707,6 +717,8 @@ debug/moc_chatwidget.cpp: ../../chatwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QVector \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qvector.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QMetaObject \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
 		../../serverconnect.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QJsonDocument \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
@@ -1826,6 +1838,8 @@ debug/moc_mainwidget.cpp: ../../mainwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QVector \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qvector.h \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
 		../../friendwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QListWidget \
 		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -3166,6 +3180,8 @@ debug/chatwidget.o: ../../chatwidget.cpp ../../chatwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QVector \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qvector.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QMetaObject \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
 		../../serverconnect.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QJsonDocument \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qjsondocument.h \
@@ -4457,6 +4473,8 @@ debug/main.o: ../../main.cpp ../../action.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QVector \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qvector.h \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
 		../../friendwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QListWidget \
 		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qlistwidget.h \
@@ -5005,6 +5023,8 @@ debug/mainwidget.o: ../../mainwidget.cpp ../../mainwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qfileinfo.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/QVector \
 		D:/tool/QT/6.5.3/mingw_64/include/QtCore/qvector.h \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QButtonGroup \
+		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qbuttongroup.h \
 		../../friendwidget.h \
 		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/QListWidget \
 		D:/tool/QT/6.5.3/mingw_64/include/QtWidgets/qlistwidget.h \

@@ -11,7 +11,6 @@ ChatWidget::ChatWidget(User user,QWidget *parent)
 
     ui->chatTextEdit->setReadOnly(true);
 
-
     initChatTextEdit();
 
     connect(ServerReceive::instance(), &ServerReceive::getChatsSuccess, this, &ChatWidget::showChatsListWidegt);
@@ -22,6 +21,32 @@ ChatWidget::ChatWidget(User user,QWidget *parent)
 
     //connect(ServerReceive::instance(), &ServerReceive::accpetFriendSuccess, this, &ChatWidget::updateChatsList);
 
+}
+void ChatWidget::initIcon()
+{
+    ui->fileButton->setCheckable(true);
+    ui->fileButton->setIcon(QIcon(":/images/system/file.png"));
+    ui->fileButton->setIconSize(QSize(30, 30)); // 适当缩小尺寸
+    ui->fileButton->setFixedSize(40, 40); // 让按钮整体变小
+    ui->fileButton->setStyleSheet(R"(
+    QPushButton {
+        border: none;
+        background: transparent;
+    }
+    QPushButton:pressed {
+        transform: scale(0.9); /* 点击时缩小一点 */
+    }
+    )");
+
+    ui->nameButton->setStyleSheet(R"(
+    QPushButton {
+        background: transparent;
+        color: black;
+        font-size: 16px;
+        border: none; /* 让背景透明 */
+        padding: 5px 10px; /* 增加点击区域 */
+    }
+    )");
 }
 void ChatWidget::initChatTextEdit()
 {
@@ -36,6 +61,9 @@ void ChatWidget::initChatTextEdit()
     ui->chatTextEdit->setFocus();
 
     ui->chatTextEdit->installEventFilter(this);
+
+    initIcon();
+
     //connect(ui->chatTextEdit, &QTextEdit::focusIn, this, &ChatWidget::updateChattingLast);
 
     //ui->sendButton->setDefault(true);
@@ -74,6 +102,8 @@ void ChatWidget::showChatsListWidegt(QVector<UserChat> userChatVector)
         qDebug() << "id:" << value.getChatId();
         qDebug() << "getChatStatus:" << value.getChatStatus();
         qDebug() << "unread count:" << value.getChatUnreadCount();
+
+
         QPushButton *buttonWidget = new QPushButton();
         QHBoxLayout *layout = new QHBoxLayout(buttonWidget);
 
@@ -84,14 +114,35 @@ void ChatWidget::showChatsListWidegt(QVector<UserChat> userChatVector)
         friendButton->setFocus();
         buttonWidget->setStyleSheet("cursor: pointer;");
 
-        connect(buttonWidget, &QPushButton::clicked, [this, value](){
-            //buttonWidget->setStyleSheet("background-color: gray; color: white;");
+        // 将按钮添加到布局
+        layout->addWidget(friendButton);
+        buttonWidget->setLayout(layout);
+
+        // 使用 QButtonGroup 确保按钮互斥选中
+        QButtonGroup *buttonGroup = new QButtonGroup(this);
+        buttonGroup->addButton(friendButton);
+        buttonGroup->setExclusive(true); // 只允许一个按钮被选中
+
+        // 按钮点击时更新样式
+        connect(buttonWidget, &QPushButton::clicked, [this, value, buttonWidget, layout](){
+            // 先清除所有按钮的样式
+            foreach (QPushButton *btn, layout->findChildren<QPushButton *>()) {
+                btn->setStyleSheet("background: transparent; border: none; color: black;");
+            }
+
+            // 设置当前按钮的样式为选中状态（浅灰色）
+            buttonWidget->setStyleSheet("background-color: #D3D3D3; color: black;");
+
+            // 其他操作
             ui->chatTextEdit->setReadOnly(false);
             ui->chatWidget->clear();
             UserChat userChat = value;
             updateServerChat(value);
             createFriendChatWidget(userChat);
         });
+
+
+
         QVBoxLayout *vlayout = new QVBoxLayout();
         QLabel *nameLabel =new QLabel(value.getChatName());
         nameLabel->setStyleSheet("font-weight: bold; color: #000000; padding-left: 10px;");
@@ -166,6 +217,24 @@ void ChatWidget::createFriendChatWidget(UserChat &value)
             addMessageToChat(chattingFriend.getChatAvatar(), message, ((senderId == user.getUserId())));
         }
     }
+
+    // 显示名字
+    ui->nameButton->setText(chattingFriend.getChatName());
+    ui->nameButton->setStyleSheet(R"(
+    QPushButton {
+        background: transparent;
+        color: black;
+        font-size: 16px;
+        border: none; /* 让背景透明 */
+        padding: 5px 10px; /* 增加点击区域 */
+    }
+    QPushButton:hover {
+        color: #333333; /* 悬停时字体变深 */
+    }
+    QPushButton:pressed {
+        color: #555555; /* 按下时字体变亮 */
+    }
+    )");
 }
 
 QWidget *ChatWidget::createMessageWidget(const QString &avatar, const QString &message, bool isSelf)
