@@ -1,4 +1,4 @@
-# 实时聊天系统————客户端
+![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/ecf3095c-2aa1-4cc7-a419-7f742fa372c1)![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/8e823b87-6fcd-4bf2-ace2-7a928afea116)# 实时聊天系统————客户端
 ## 项目介绍（客户端）：
 基于 Linux 的高性能聊天服务器与 Qt 客户端的跨网段通信系统，采用 TCP 作为通信协议，支持**用户注册、登录、好友管理 和 实时消息收发**。服务端基于 Linux 开发，使用 **epoll + 线程池** 进行高并发连接管理，客户端采用 Qt 实现跨平台 GUI。（本篇只包含客户端）
 
@@ -31,7 +31,9 @@
 
 ## 框架
 ![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
-![Uploading 67482f768071677e8eb44c841035083.png…]()
+![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/f8f68a2b-4542-4edd-9f86-b1178da9703d)
+
+
 
 ## 安装包
 这里是使用部分...
