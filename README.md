@@ -27,7 +27,7 @@
 这里是简介部分...
 
 ## 界面概述
-
+[主界面](ClassDescription/mainwidget.md)
 
 ## 框架
 这里是安装部分...
