@@ -30,7 +30,8 @@
 [主界面](ClassDescription/mainwidget.md)
 
 ## 框架
-这里是安装部分...
+![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
+![Uploading 67482f768071677e8eb44c841035083.png…]()
 
 ## 安装包
 这里是使用部分...
