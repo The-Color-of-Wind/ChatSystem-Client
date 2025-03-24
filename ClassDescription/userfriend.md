@@ -3,4 +3,12 @@
 记录好友信息
 
 ## 变量
-参考数据库介绍
+- userFriendId;
+- userFriendPhone;
+- userFriendName;
+- userFriendEmail;
+- userFriendAvatar;
+- userFriendStatus;
+- userFriendCreated;
+- userFriendRelation;
+- userCreatedRelation;
