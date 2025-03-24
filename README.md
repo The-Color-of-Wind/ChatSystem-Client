@@ -27,7 +27,18 @@
 这里是简介部分...
 
 ## 界面概述
+[启动界面](ClassDescription/action.md)
+[登录界面](ClassDescription/loginwidget.md)
+[注册界面](ClassDescription/registerwidget.md)
 [主界面](ClassDescription/mainwidget.md)
+[聊天界面](ClassDescription/chatwidget.md)
+[好友界面](ClassDescription/friendwidget.md)
+
+## 类概述
+[用户类](ClassDescription/user.md)
+[好友类](ClassDescription/userfriend.md)
+[聊天框类](ClassDescription/userchat.md)
+[信息类](ClassDescription/message.md)
 
 ## 框架
 ![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
