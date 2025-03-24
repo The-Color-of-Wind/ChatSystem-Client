@@ -28,7 +28,7 @@
 
 
 ## Demo演示
-这里是简介部分...
+
 
 ## 界面概述
 [启动界面](ClassDescription/action.md)
