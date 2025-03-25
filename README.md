@@ -20,14 +20,19 @@
 
 ## 目录
 1. [Demo演示](#Demo演示)
-2. [界面概述](#界面概述)
-3. [框架](#框架)
-4. [安装包](#安装包)
+2. [框架](#框架)
+3. [界面概述](#界面概述)
+4. [类概述](#类概述)
 5. [更新日志](#更新日志)
-6. [致谢](#致谢)
+6. [安装包](#安装包)
 
 
 ## Demo演示
+
+
+## 框架
+![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
+![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/f8f68a2b-4542-4edd-9f86-b1178da9703d)
 
 
 ## 界面概述
@@ -52,11 +57,6 @@
 [聊天框类](ClassDescription/userchat.md)
 
 [信息类](ClassDescription/message.md)
-
-
-## 框架
-![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
-![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/f8f68a2b-4542-4edd-9f86-b1178da9703d)
 
 
 ## 更新日志
