@@ -94,6 +94,12 @@ void ChatWidget::showChatsListWidegt(QVector<UserChat> userChatVector)
     });
     this->userChatVector = userChatVector;
     ui->chatListWidget->clear();
+
+
+    QButtonGroup *buttonGroup = new QButtonGroup(this); // 创建按钮组
+    // 设置按钮的选中方式为单选（只允许选择一个）
+    buttonGroup->setExclusive(true);
+    int i = 0;
     for (const UserChat& value : userChatVector) {
         if(value.getChatStatus() == "close"){
             qDebug() << "getChatStatus" << value.getChatStatus();
@@ -118,21 +124,35 @@ void ChatWidget::showChatsListWidegt(QVector<UserChat> userChatVector)
         layout->addWidget(friendButton);
         buttonWidget->setLayout(layout);
 
-        // 使用 QButtonGroup 确保按钮互斥选中
-        QButtonGroup *buttonGroup = new QButtonGroup(this);
-        buttonGroup->addButton(friendButton);
-        buttonGroup->setExclusive(true); // 只允许一个按钮被选中
 
+        buttonWidget->setCheckable(true); // 让按钮可选中
+        // 将按钮添加到按钮组中
+        buttonGroup->addButton(buttonWidget, i++);
         // 按钮点击时更新样式
-        connect(buttonWidget, &QPushButton::clicked, [this, value, buttonWidget, layout](){
-            // 先清除所有按钮的样式
-            foreach (QPushButton *btn, layout->findChildren<QPushButton *>()) {
-                btn->setStyleSheet("background: transparent; border: none; color: black;");
+        connect(buttonWidget, &QPushButton::clicked, [this, value, buttonWidget, layout, buttonGroup](){
+
+            foreach (QAbstractButton *btn, buttonGroup->buttons()) {
+                btn->setChecked(false);
+                btn->setStyleSheet(R"(
+                QPushButton {
+                    border: none;
+                    background: transparent;
+                    color: white;
+                    font: bold 25px "SimHei";
+                }
+            )");
             }
 
-            // 设置当前按钮的样式为选中状态（浅灰色）
-            buttonWidget->setStyleSheet("background-color: #D3D3D3; color: black;");
-
+            // 选中当前按钮，设置选中样式
+            buttonWidget->setChecked(true);
+            buttonWidget->setStyleSheet(R"(
+            QPushButton {
+                border: none;
+                background-color: #D3D3D3;
+                color: black;
+                font: bold 25px "SimHei";
+            }
+        )");
             // 其他操作
             ui->chatTextEdit->setReadOnly(false);
             ui->chatWidget->clear();

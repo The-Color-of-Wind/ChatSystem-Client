@@ -23,6 +23,8 @@
 #include <QFileDialog>
 #include <QMetaObject>
 
+#include <QButtonGroup>
+
 #include "serverconnect.h"
 #include "serverconnectthread.h"
 #include "serverreceive.h"
