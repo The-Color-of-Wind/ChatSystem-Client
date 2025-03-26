@@ -18,17 +18,17 @@
 #include <QImage>
 #include <QString>
 
-#include <QTextEdit>             // 用于使用 QTextEdit 控件
-#include <QTextCursor>           // 用于操作文本光标
-#include <QTextImageFormat>      // 用于插入图片
-#include <QClipboard>            // 用于访问剪贴板
-#include <QMimeData>             // 用于处理 MIME 数据（如文件路径、图片等）
-#include <QDragEnterEvent>       // 用于处理拖动进入事件
-#include <QDropEvent>            // 用于处理拖放事件
-#include <QUrl>                  // 用于解析文件 URL
-#include <QImage>                // 用于处理图像数据
-#include <QApplication>          // 用于访问 QApplication 类，获取剪贴板
-#include <QFileDialog>           // 用于选择文件
+#include <QTextEdit>
+#include <QTextCursor>
+#include <QTextImageFormat>
+#include <QClipboard>
+#include <QMimeData>
+#include <QDragEnterEvent>
+#include <QDropEvent>
+#include <QUrl>
+#include <QImage>
+#include <QApplication>
+#include <QFileDialog>
 #include <QRegularExpression>
 #include <QVector>
 

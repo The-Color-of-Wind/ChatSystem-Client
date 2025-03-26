@@ -132,6 +132,11 @@ void FriendWidget::showFriendsListWidegt(const QMap<QString, UserFriend> userFri
         showNewFriendList();
     });
 
+
+    QButtonGroup *buttonGroup = new QButtonGroup(this); // 创建按钮组
+    // 设置按钮的选中方式为单选（只允许选择一个）
+    buttonGroup->setExclusive(true);
+    int i=0;
     for (auto it = userFriendMap.begin(); it != userFriendMap.end(); ++it) {
         const QString key = it.key();
         const UserFriend& value = it.value();
@@ -180,7 +185,35 @@ void FriendWidget::showFriendsListWidegt(const QMap<QString, UserFriend> userFri
             });
 
 
-            connect(buttonWidget, &QPushButton::clicked, [this, value](){
+            buttonWidget->setCheckable(true); // 让按钮可选中
+            // 将按钮添加到按钮组中
+            buttonGroup->addButton(buttonWidget, i++);
+
+            connect(buttonWidget, &QPushButton::clicked, [this, value, buttonGroup, buttonWidget](){
+                foreach (QAbstractButton *btn, buttonGroup->buttons()) {
+                    btn->setChecked(false);
+                    btn->setStyleSheet(R"(
+                QPushButton {
+                    border: none;
+                    background: transparent;
+                    color: white;
+                    font: bold 25px "SimHei";
+                }
+            )");
+                }
+
+                // 选中当前按钮，设置选中样式
+                buttonWidget->setChecked(true);
+                buttonWidget->setStyleSheet(R"(
+            QPushButton {
+                border: none;
+                background-color: #D3D3D3;
+                color: black;
+                font: bold 25px "SimHei";
+            }
+        )");
+
+
                 ui->newfriendsListWidget->hide();
                 this->setClickingUserFriend(value);
 
