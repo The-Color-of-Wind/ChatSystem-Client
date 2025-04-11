@@ -1,5 +1,5 @@
-# 实时聊天系统————客户端
-## 项目介绍（客户端）：[服务器](https://github.com/The-Color-of-Wind/chat-server/tree/main)
+# 实时聊天系统————客户端（**[服务器端](https://github.com/The-Color-of-Wind/chat-server/tree/main)**）
+## 项目介绍（客户端）：
 基于 Linux 的高性能聊天服务器与 Qt 客户端的跨网段通信系统，采用 TCP 作为通信协议，支持**用户注册、登录、好友管理 和 实时消息收发**。服务端基于 Linux 开发，使用 **epoll + 线程池** 进行高并发连接管理，客户端采用 Qt 实现跨平台 GUI。（本篇只包含客户端）
 
 ## 客户端
