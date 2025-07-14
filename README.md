@@ -1,4 +1,4 @@
-# 实时聊天系统————客户端
+# 实时聊天系统—客户端（**[服务器介绍](https://github.com/The-Color-of-Wind/ChatSystem-Server)，若要复现整个项目，请使用服务器version1，后续版本优化了传输数据格式，客户端未同步！**）
 ## 项目介绍（客户端）：
 基于 Linux 的高性能聊天服务器与 Qt 客户端的跨网段通信系统，采用 TCP 作为通信协议，支持**用户注册、登录、好友管理 和 实时消息收发**。服务端基于 Linux 开发，使用 **epoll + 线程池** 进行高并发连接管理，客户端采用 Qt 实现跨平台 GUI。（本篇只包含客户端）
 
@@ -15,20 +15,24 @@
 
 
 ### **本项目支持跨网段传输，可以对其进行打包生成安装包，届时将服务器部署到虚拟机上，就可以跟小伙伴们在同一局域网下聊天哦！**（如果部署到云服务器上，就可以随意聊天了！）
-### **服务器代码还没上传，如果需要的人多的话，我再整理上传**
 
 
 ## 目录
 1. [Demo演示](#Demo演示)
-2. [界面概述](#界面概述)
-3. [框架](#框架)
-4. [安装包](#安装包)
+2. [框架](#框架)
+3. [界面概述](#界面概述)
+4. [类概述](#类概述)
 5. [更新日志](#更新日志)
-6. [致谢](#致谢)
+6. [安装包](#安装包)
 
 
 ## Demo演示
-这里是简介部分...
+[演示视频](https://www.bilibili.com/video/BV1GrosY3E7k/?vd_source=57d3045b67b7aa01f9f207a33b419c6a)
+
+## 框架
+![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
+![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/f8f68a2b-4542-4edd-9f86-b1178da9703d)
+
 
 ## 界面概述
 [启动界面](ClassDescription/action.md)
@@ -52,11 +56,6 @@
 [聊天框类](ClassDescription/userchat.md)
 
 [信息类](ClassDescription/message.md)
-
-
-## 框架
-![17cbcaa469b8cabf301f1f46c5eec79](https://github.com/user-attachments/assets/79878936-25bb-45c1-9fb8-c0420581f572)
-![67482f768071677e8eb44c841035083](https://github.com/user-attachments/assets/f8f68a2b-4542-4edd-9f86-b1178da9703d)
 
 
 ## 更新日志
