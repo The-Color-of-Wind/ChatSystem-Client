@@ -12,6 +12,7 @@
 #include <QMap>
 #include <QMutex>
 #include <QMutexLocker>
+#include <winsock2.h>
 
 #include "user.h"
 #include "userfriend.h"
