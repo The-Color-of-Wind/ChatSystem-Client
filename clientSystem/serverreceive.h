@@ -12,6 +12,7 @@
 #include <QMap>
 #include <QMutex>
 #include <QMutexLocker>
+#include <QtEndian>
 
 #include "user.h"
 #include "userfriend.h"
@@ -40,6 +41,7 @@ public:
     }
 
     void onReadyRead();
+    void handleJsonArray(const QJsonArray& jsonArray, const QByteArray& jsonData);
 signals:
     void loginSuccess(User user);
     void registerSucess(QString id);
@@ -53,7 +55,7 @@ signals:
 
     void sendErrorSignal(QString message);     //显示错误信息
     void receiveMessageSuccess(Message &message);
-
+    
 
 public slots:
 
